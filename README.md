@@ -60,7 +60,7 @@ Example output:
  Option 1: Run Locally
 
 1. Download or clone the repository:
-git clone https://github.com/maxmillan45/Calorie-Counter.git
+git clone https://github.com/maxmillan45/Calorie-Counter-.git
 
 2. Open the folder in VS Code.
 
