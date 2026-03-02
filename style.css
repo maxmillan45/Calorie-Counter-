@@ -55,7 +55,6 @@ input:focus {
     border: none;    border-radius: 4px;
     padding: 10px 15px;
     font-weight: 600;
-    transition: background 0.2s;
     width: 100%;
 }
 
