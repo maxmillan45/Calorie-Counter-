@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calorie counter</title>
+    <title>Calorie Counter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Calorie Counter</h1>
-
+        
         <form id="calorie-form">
-            <input type="text" id="food-name" placeholder="Enter food item" required>
-            <input type="number" id="calories" placeholder="Enter calories" required>
-            <button type="submit">Add</button>
+            <div class="form-group">
+                <input type="text" id="item-name" placeholder="Food Item (e.g. Apple)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="item-calories" placeholder="Calories" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Item</button>
         </form>
-        <ul id="food-list"></ul>
-        <div class="total">
-            Total Calories: <span id="total-calories">0</span>
+
+        <div class="stats-card">
+            <span class="stats-label">Total Calories:</span>
+            <span id="total-calories" class="stats-value">0</span>
         </div>
-    <button id="reset-btn" class="reset">Reset Day</button>
+
+        <ul id="food-list">
+            <!-- Items injected via JS -->
+        </ul>
+
+        <div class="actions">
+            <button id="reset-btn" class="btn btn-danger">Reset Day</button>
+            <button id="fetch-btn" class="btn btn-secondary">Load Defaults</button>
+        </div>
     </div>
-    
     <script src="script.js"></script>
-    
 </body>
 </html>
