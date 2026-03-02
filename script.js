@@ -54,11 +54,12 @@ function renderItems() {
 
     items.forEach(item => {
         total += item.calories;
+        
         const li = document.createElement('li');
-        li.className = 'flex justify-between items-center bg-gray-50 p-2 rounded border border-gray-200';
+        li.className = 'food-item';
         li.innerHTML = `
-            <span>${item.name} <span class="text-gray-500 text-sm">(${item.calories} kcal)</span></span>
-            <button onclick="removeItem(${item.id})" class="text-red-500 hover:text-red-700 font-bold px-2">&times;</button>
+            <span>${item.name} <span class="calorie-value">(${item.calories} kcal)</span></span>
+            <button onclick="removeItem(${item.id})" class="remove-btn">&times;</button>
         `;
         foodList.appendChild(li);
     });    totalCalDisplay.textContent = total;
